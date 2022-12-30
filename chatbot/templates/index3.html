@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CONSULT - Consultancy Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+	
+
+	
+
+	/* body {
+    background-image: url("15410.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+	  display:flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 100vh;
+
+	} */
+
+/* 
+	html, body {
+  background: #efefef;      
+  height:100%;  
+} */
+#center-text {          
+  display: flex;
+  flex: 1;
+  flex-direction:column; 
+  justify-content: center;
+  align-items: center;  
+  height:100%;
+  
+}
+#chat-circle {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: #5A5EB9;
+  width: 80px;
+  height: 80px;  
+  border-radius: 50%;
+  color: white;
+  padding: 28px;
+  cursor: pointer;
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn#my-btn {
+     background: white;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    border-radius: 45px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: #5865C3;
+}
+#chat-overlay {
+    background: rgba(255,255,255,0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: none;
+}
+
+
+.chat-box {
+  display:none;
+  background: #efefef;
+  position:fixed;
+  right:30px;
+  bottom:50px;  
+  width:350px;
+  max-width: 85vw;
+  max-height:100vh;
+  border-radius:5px;  
+/*   box-shadow: 0px 5px 35px 9px #464a92; */
+  
+}
+.chat-box-toggle {
+  float:right;
+  margin-right:15px;
+  cursor:pointer;
+}
+.chat-box-header {
+  background: #5A5EB9;
+  height:70px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px; 
+  color:white;
+  text-align:center;
+  font-size:20px;
+  padding-top:17px;
+}
+.chat-box-body {
+  position: relative;  
+  height:370px;  
+  height:auto;
+  border:1px solid #ccc;  
+  overflow: hidden;
+}
+.chat-box-body:after {
+  content: "";
+  background-color:white;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height:100%;
+  position: absolute;
+  z-index: -1;   
+}
+#chat-input {
+  background: #f4f7f9;
+  width:100%; 
+  position:relative;
+  height:47px;  
+  padding-top:10px;
+  padding-right:50px;
+  padding-bottom:10px;
+  padding-left:15px;
+  border:none;
+  resize:none;
+  outline:none;
+  border:1px solid #ccc;
+  color:#888;
+  border-top:none;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  overflow:hidden;  
+}
+.chat-input > form {
+    margin-bottom: 0;
+}
+#chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+#chat-input::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+#chat-input:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+#chat-input:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+.chat-submit {  
+  position:absolute;
+  bottom:3px;
+  right:10px;
+  background: transparent;
+  box-shadow:none;
+  border:none;
+  border-radius:50%;
+  color:#5A5EB9;
+  width:35px;
+  height:35px;  
+}
+
+.chat-voice {  
+  position:absolute;
+  bottom:3px;
+  right:40px;
+  background: transparent;
+  box-shadow:none;
+  border:none;
+  border-radius:50%;
+  color:#5A5EB9;
+  width:35px;
+  height:35px;  
+}
+.chat-logs {
+  padding:15px; 
+  height:370px;
+  overflow-y:scroll;
+}
+
+.chat-logs::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.chat-logs::-webkit-scrollbar
+{
+	width: 5px;  
+	background-color: #F5F5F5;
+}
+
+.chat-logs::-webkit-scrollbar-thumb
+{
+	background-color: #5A5EB9;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+   .chat-logs {
+        height:40vh;
+    }
+}
+
+.chat-msg.user > .msg-avatar img {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  float:left;
+  width:15%;
+}
+.chat-msg.self > .msg-avatar img {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  float:right;
+  width:15%;
+}
+.cm-msg-text {
+  background:white;
+  padding:10px 15px 10px 15px;  
+  color:#666;
+  max-width:75%;
+  float:left;
+  margin-left:10px; 
+  position:relative;
+  margin-bottom:20px;
+  border-radius:30px;
+}
+.chat-msg {
+  clear:both;    
+}
+.chat-msg.self > .cm-msg-text {  
+  float:right;
+  margin-right:10px;
+  background: #5A5EB9;
+  color:white;
+}
+.cm-msg-button>ul>li {
+  list-style:none;
+  float:left;
+  width:50%;
+}
+.cm-msg-button {
+    clear: both;
+    margin-bottom: 70px;
+}
+#chat{
+   position: fixed;
+   left: 815px;
+   font-size: 18px;
+   bottom: 150px;
+   color: white;
+   background-color: black;
+   height: 50px;
+   width: 140px;
+   border-radius: 12px;
+}
+
+
+.boxed{
+
+  width: 900px;
+  height: 300px;
+  position: fixed;
+  left: 460px;
+  top: 340px;
+font-size: 24px;
+color: #050505;
+
+font-weight: bold;
+text-align: justify;
+
+}
+
+</style>
+</head>
+
+<div>
+    <!-- Topbar Start -->
+   
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-comment text-primary me-2"></i>superRob</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 me-n3">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Service</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="quote.html" class="dropdown-item">Quote Form</a>
+                        <a href="team.html" class="dropdown-item">The Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100 h-50" src="https://mehez.com/wp-content/uploads/2021/06/solutions-logistiques.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase"></h5>
+                            <h1 class="display-1 text-white mb-md-4">We Provide Solution On Your Business</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Ask me</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="https://mehez.com/wp-content/uploads/2021/06/solutions-logistiques.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Business Consultancy</h5>
+                            <h1 class="display-1 text-white mb-md-4">Take Our Help To Reach The Top Level</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+   
+    <!-- About End -->
+    
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">What We Offer</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-user-tie fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Business Research</h3>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-chart-pie fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Stretagic Planning</h3>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-chart-line fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Market Analysis</h3>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-chart-area fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Financial Analaysis</h3>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-balance-scale fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">legal Advisory</h3>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Tax & Insurance</h3>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid py-6 px-5">
+        
+        
+       
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">Our Team Members</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="team-item position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                    <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
+                        <h3 class="text-white">Chouaf Mina</h3>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="team-item position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                    <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
+                        <h3 class="text-white">Fadli Fatine</h3>
+                       
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-secondary p-0">
+        <div class="row g-0">
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0m0VsdkYdfss3kT2J19_ByL_vJaPnHg2P2w9QFuZS-5HSUXFxzM_WRDlWHISNlkse19E&usqp=CAU" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4">What Say Our Client!!!</h1>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item">
+                        <p class="fs-4 fw-normal mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    
+    <!-- Blog End -->
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid  text-secondary p-5">
+        
+    </div>
+   
+    <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">Your Site Name</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <div id="body"> 
+  
+		<div id="chat-circle" class="btn btn-raised">
+				<div id="chat-overlay"></div>
+					<i class="back-to-top material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+						<path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+					  </svg></i>
+			</div>
+		  
+		  <div class="chat-box">
+			<div class="chat-box-header">
+			  Ask me
+			  <span class="chat-box-toggle"><i class="bi bi-x"></i></span>
+			</div>
+			<div class="chat-box-body">
+			  <div class="chat-box-overlay">   
+			  </div>
+			  <div class="chat-logs">
+			   
+			  </div><!--chat-log -->
+			</div>
+			<div class="chat-input">      
+			  <form>
+				<input type="text" id="chat-input" placeholder="Send a message..."/>
+				
+				<button type="submit" class="chat-voice" id="chat-voice"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+					<path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+					<path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+				  </svg></i></button>
+				  
+			  <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+				<path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+			  </svg></i></button>
+		
+			  </form>      
+			</div>
+		  </div>
+		  
+		  
+		  
+		  
+		</div>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+	<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+	<script>
+	$(function() {
+	  const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+	  const recognition = new SpeechRecognition();
+	  recognition.continuous = false;
+	  recognition.lang = 'en-US';
+	  recognition.interimResults = false;
+	  recognition.maxAlternatives = 1;
+  
+  
+	  $("#chat-voice").click(function(e) {
+		  e.preventDefault();
+		  recognition.start();
+	  });
+  
+	  recognition.onresult = (event) => {
+		  const response = event.results[0][0].transcript;
+		  console.log("response" + response)
+		  generate_message(response, 'self');
+		  test(response,'user')
+	  }
+  
+	  recognition.onspeechend = () => {
+		  recognition.stop();
+	  }
+	var INDEX = 0; 
+	$("#chat-submit").click(function(e) {
+	  e.preventDefault();
+	  var msg = $("#chat-input").val(); 
+	  if(msg.trim() == ''){
+		return false;
+	  }
+	  temp=msg.split(':')
+		if((temp[0].toLowerCase()).trim()=='google')
+		{search='https://www.google.com/search?q=' + temp[1].trim()
+		window.open(search)}
+	  generate_message(msg, 'self');
+	  var buttons = [
+		  {
+			name: 'Existing User',
+			value: 'existing'
+		  },
+		  {
+			name: 'New User',
+			value: 'new'
+		  }
+		];
+	  setTimeout(function() {      
+		  test(msg,'user');
+		  
+		  
+	  }, 1000)
+	  
+	})
+	
+	function generate_message(msg, type) {
+	  INDEX++;
+	  var str="";
+	  str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+	  str += "          <span class=\"msg-avatar\">";
+	  str += "            <img src="+PERSON_IMG+">";
+	  str += "          <\/span>";
+	  str += "          <div class=\"cm-msg-text\">";
+	  str += msg;
+	  str += "          <\/div>";
+	  str += "        <\/div>";
+	  $(".chat-logs").append(str);
+	  $("#cm-msg-"+INDEX).hide().fadeIn(300);
+	  if(type == 'self'){
+	   $("#chat-input").val(''); 
+	  }    
+	  $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+	} 
+	function test(rawText,type){
+	  INDEX++;
+  
+	  $.get("/get", { msg: rawText }).done(function (data) {
+		  console.log(rawText);
+		  console.log(data);
+		  msgText = data;
+		  msgText=msgText.split("\n")
+		  var i;
+	  msg.text = msgText;
+	  speechSynthesis.speak(msg);
+	  
+		  for(i=0;i<msgText.length;i++)
+		  {
+	  var str="";
+	  str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+	  str += "          <span class=\"msg-avatar\">";
+	  str += "            <img src="+BOT_IMG+">";
+	  str += "          <\/span>";
+	  str += "          <div class=\"cm-msg-text\">";
+	  str += msgText[i];
+	  str += "          <\/div>";
+	  str += "        <\/div>";
+	  
+	  $(".chat-logs").append(str); 
+		  
+		}
+		
+	  });
+	  
+  
+	  $("#cm-msg-"+INDEX).hide().fadeIn(300);
+	  if(type == 'self'){
+	   $("#chat-input").val(''); 
+	  }    
+	  $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+  
+	} 
+	
+	function generate_button_message(msg, buttons){    
+	  /* Buttons should be object array 
+		[
+		  {
+			name: 'Existing User',
+			value: 'existing'
+		  },
+		  {
+			name: 'New User',
+			value: 'new'
+		  }
+		]
+	  */
+	  INDEX++;
+	  var btn_obj = buttons.map(function(button) {
+		 return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+	  }).join('');
+	  var str="";
+	  str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+	  str += "          <span class=\"msg-avatar\">";
+	  str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+	  str += "          <\/span>";
+	  str += "          <div class=\"cm-msg-text\">";
+	  str += msg;
+	  str += "          <\/div>";
+	  str += "          <div class=\"cm-msg-button\">";
+	  str += "            <ul>";   
+	  str += btn_obj;
+	  str += "            <\/ul>";
+	  str += "          <\/div>";
+	  str += "        <\/div>";
+	  $(".chat-logs").append(str);
+	  $("#cm-msg-"+INDEX).hide().fadeIn(300);   
+	  $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+	  $("#chat-input").attr("disabled", true);
+	}
+	
+	$(document).delegate(".chat-btn", "click", function() {
+	  var value = $(this).attr("chat-value");
+	  var name = $(this).html();
+	  $("#chat-input").attr("disabled", false);
+	  generate_message(name, 'self');
+	})
+	
+	$("#chat-circle").click(function() {    
+	  $("#chat-circle").toggle('scale');
+	  $(".chat-box").toggle('scale');
+	})
+	
+	$(".chat-box-toggle").click(function() {
+	  $("#chat-circle").toggle('scale');
+	  $(".chat-box").toggle('scale');
+	})
+	
+  });
+	
+  
+	  // Icons made by Freepik from www.flaticon.com
+	  const BOT_IMG = "https://1millionbot.com/wp-content/uploads/2018/09/criptina-chatbot.png";
+	  const PERSON_IMG = "https://1millionbot.com/wp-content/uploads/2018/05/lola-chatbot.png";
+	  const BOT_NAME = "Robot";
+	  const PERSON_NAME = "You";
+  
+	 
+	  
+	  var synth = window.speechSynthesis;
+  
+  var msg = new SpeechSynthesisUtterance();
+  var voices = synth.getVoices();
+  msg.voice = voices[0];
+  msg.lang = 'en-US'
+  msg.rate = 1;
+  msg.pitch = 1;
+  
+	 
+  
+  
+	  // Utils
+	 
+  
+	  
+  
+  
+  
+	</script>
+</body>
+
+</html>

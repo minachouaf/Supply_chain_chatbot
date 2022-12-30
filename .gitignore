@@ -1,0 +1,7 @@
+# local env files
+.venv
+__pycache__
+chatbot/__pycache__
+chatbot_codes/smymodel.h5
+chatbot_codes/classes.pkl
+chatbot_codes/words.pkl

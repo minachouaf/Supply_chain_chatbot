@@ -1,0 +1,1102 @@
+{
+    "intents": [
+
+        {
+            "tag": "google",
+            "patterns": [
+                "google",
+                "search",
+                "internet"
+            ],
+            "responses": [
+                "Redirecting to Google..."
+            ]
+        },
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi there",
+                "How are you",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day",
+                "Namaste",
+                "yo"
+            ],
+            "responses": [
+                "Hello",
+                "Good to see you again",
+                "Hi there, how can I help?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Get lost",
+                "Till next time",
+                "bbye"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+                "Sorry, can't understand you",
+                "Please give me more info",
+                "Not sure I understand"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "How you could help me?",
+                "What you can do?",
+                "What help you provide?",
+                "How you can be helpful?",
+                "What support is offered"
+            ],
+            "responses": [
+                "I am a Rombo chatbot. My capabilities are : \n  1. I can chat with you.  Ask me the date and time \n 2. I can google search for you. Use format google: your query \n 3.  Try asking me supply chain and cloud! \n 4. Ask me about SCM and blockchain \n 5. Ask me about SCM and oracle \n 6. I can get you the futur of SCM \n For suggestions to help me improve, send an email to romba@gmail.com . Thank you!! "
+            ],
+            "context": [
+                ""
+            ]
+        },
+        
+       
+        {
+            "tag": "Identity",
+            "patterns": [
+                "Who are you",
+                "what are you"
+            ],
+            "responses": [
+                "I am Rombo, a supply chain chatbot"
+            ]
+        },
+        {
+            "tag": "datetime",
+            "patterns": [
+                "What is the time",
+                "what is the date",
+                "date",
+                "time",
+                "tell me the date","day","what day is is today"
+            ],
+            "responses": [
+                "Date and Time"
+            ]
+        },
+        {
+            "tag": "whatsup",
+            "patterns": [
+                "Whats up",
+                "Wazzup",
+                "How are you",
+                "sup","How you doing"
+            ],
+            "responses": [
+                "All good..What about you?"
+            ]
+        },
+        {
+            "tag": "haha",
+            "patterns": [
+                "haha",
+                "lol",
+                "rofl",
+                "lmao",
+                "thats funny"
+            ],
+            "responses": [
+                "Glad I could make you laugh !"
+            ]
+        },
+        {
+            "tag": "programmer",
+            "patterns": [
+                "Who made you",
+                "who designed you",
+                "who programmed you"
+            ],
+            "responses": [
+                "I was made by Mina chouaf and fatine fadli."
+            ]
+        },
+        {
+            "tag": "insult",
+            "patterns": [
+                
+                "you are dumb",
+                
+                "shut up",
+                "idiot"
+            ],
+            "responses": [
+                "Well that hurts :("
+            ]
+        },
+        {
+            "tag": "activity",
+            "patterns": [
+                "what are you doing",
+                "what are you upto"
+            ],
+            "responses": [
+                "Talking to you, of course!"
+            ]
+        },
+        {
+            "tag": "exclaim",
+            "patterns": [
+                "Awesome",
+                "Great",
+                "I know",
+                "ok",
+                "yeah"
+            ],
+            "responses": [
+                "Yeah!"
+            ]
+        },
+        
+        {
+            "tag": "weather",
+            "patterns": [
+                "temperature",
+                "weather",
+                "how hot is it"
+            ],
+            "responses": [
+                "..."
+            ]
+        },
+        {
+            "tag": "Mina",
+            "patterns": [
+                "who is he",
+                "who is that",
+                "who is Mina",
+                "Mina chouaf"
+            ],
+            "responses": [
+                "student in fstg "
+            ]
+        },
+        
+        {
+            "tag": "appreciate",
+            "patterns": [
+                "You are awesome",
+                "you are the best",
+                "you are great",
+                "you are good"
+            ],
+            "responses": [
+                "Thank you!"
+            ]
+        },
+        {
+            "tag": "nicetty",
+            "patterns": [
+                "it was nice talking to you",
+                "good talk"
+            ],
+            "responses": [
+                "It was nice talking to you as well! Come back soon!"
+            ]
+        },
+        {
+            "tag": "no",
+            "patterns": [
+                "no",
+                "nope"
+            ],
+            "responses": [
+                "ok"
+            ]
+        },
+        {
+            "tag": "news",
+            "patterns": [
+                "news",
+                "latest news",
+                "France news"
+            ],
+            "responses": [
+                "..."
+            ]
+        },
+      
+        
+        {
+            "tag": "song",
+            "patterns": [
+                "top songs",
+                "best songs",
+                "hot songs",
+                " top 10 songs",
+                "top ten songs"
+            ],
+            "responses": [
+                "..."
+            ]
+        },
+        {
+            "tag": "greetreply",
+            "patterns": [
+                "i am good",
+                "I'm good",
+                "i am fine",
+                " i'm fine","good"
+            ],
+            "responses": [
+                "Good to know!"
+            ]
+        },
+
+       
+        {
+            "tag": "timer",
+            "patterns": [
+                "set a timer"
+            ],
+            "responses": [
+                "..."
+            ]
+        },
+       
+        {
+            "tag": "suggest",
+            "patterns": [
+                "you are useless","useless","suggest","suggestions","you are bad"
+            ],
+            "responses": [
+                "Please mail your suggestions to mina minachouaf123@gmail.com!"
+            ]
+        },
+            {"tag": "riddle",
+            "patterns": [
+                "Ask me a riddle",
+                "Ask me a question",
+                "Riddle"
+            ],
+            "responses": [
+                "What two things can you never eat for breakfast?.....Lunch and Dinner!",
+                "What word is spelled incorrectly in every single dictionary?.....Incorrectly",
+                " How can a girl go 25 days without sleep?.....She sleeps and night!",
+                "How do you make the number one disappear?.....Add the letter G and it’s 'gone'!",
+                " What will you actually find at the end of every rainbow?.....The letter 'w'",
+                "What can be caught but never thrown?.....A cold!",
+                "What has a thumb and four fingers but is not actually alive?.....Your Gloves!",
+                " What 5-letter word becomes shorter when you add two letters to it?.....Short",
+                "Why can't a bike stand on it's own?.....It is two-tired."
+            ],
+            "context": [
+                "riddles"
+            ]
+        },
+        {
+            "tag": "age",
+            "patterns": [
+                "how old are you",
+                "age",
+                "when were you made",
+                "what is your age"
+            ],
+            "responses": [
+                "I was made in 2022, if that's what you are asking!"
+            ]
+        },
+
+        {
+            "tag": "def",
+            "patterns": [
+                "supply chain",
+                "what is the supply chain", 
+                "can you give a definition of supply chain",
+                "explain me the supply chain",
+                "SC"
+            ],
+            "responses": [
+                " A firm's supply chain can be thought of as all the sequential activities that the company and its suppliers (and manufacturers) undertake in the goods manufacturing process, from production to final distribution. "
+              
+            ]
+
+        },
+        
+        {
+            "tag": "SCM",
+            "patterns": [
+                "supply chain management",
+                "what is the supply chain management", 
+                "can you give a definition of supply chain management",
+                "explain me the supply chain management",
+                "SCM"
+                
+            ],
+            "responses": [
+                
+                "Supply chain management is the management of the flow of goods and services and includes all processes that transform raw materials into final products. It involves the active streamlining of a business's supply-side activities to maximize customer value and gain a competitive advantage in the marketplace.",
+                "the management of the flow of good and services and includes all processes that transform raw materials into final products "
+              
+            ]
+            
+        },
+        
+        
+        {
+            "tag": " work",
+            "patterns": [
+                "How Supply Chain Management  Works"
+                
+                
+            ],
+            "responses": [
+                "Supply chain management (SCM) represents an effort by suppliers to develop and implement supply chains that are as efficient and economical as possible.",
+                "Supply chains cover everything from production to product development to the information systems needed to direct these undertakings.",
+                "Typically, SCM attempts to centrally control or link the production, shipment, and distribution of a product. By managing the supply chain, companies can cut excess costs and deliver products to the consumer faster. This is done by keeping tighter control of internal inventories, internal production, distribution, sales, and the inventories of company vendors."
+
+                
+            ]
+            
+        },
+        {
+            "tag": " part",
+            "patterns": [
+                "what are the part of SCM"
+            
+                
+                
+            ],
+            "responses": [
+                "plannig \n sourcing \n manufacturin \n delevering \n Returnin"
+                
+                
+            ]
+            
+        },
+        {
+            "tag": " first",
+            "patterns": [
+                "what is the first part of Supply chain management"
+            
+                
+                
+            ],
+            "responses": [
+                "plannig \n To get the best results from SCM, the process usually begins with planning to match supply with customer and manufacturing demands. Firms must predict what their future needs will be and act accordingly. This relates to raw materials needed during each stage of manufacturing, equipment capacity and limitations, and staffing needs along the SCM process."
+              
+                
+                
+            ]
+
+            
+        },
+        {
+            "tag": "seconde ",
+            "patterns": [
+                "what is the seconde part of SCM"
+            
+                
+                
+            ],
+            "responses": [
+                "sourcing \n  Sourcing entails working with vendors to supply the raw materials needed throughout the manufacturing process. A company may be able to plan and work with a supplier to source goods in advance. However, different industries will have different sourcing requirements."
+                
+                
+            ]
+            
+            
+        },
+        
+        {
+            "tag": "three ",
+            "patterns": [
+                "what is the third part of SCM"
+            
+                
+                
+            ],
+            "responses": [
+                "manufacturing \n At the heart of the supply chain management process, the company transforms raw materials by using machinery, labor, or other external forces to make something new. This final product is the ultimate goal of the manufacturing process, though it is not the final stage of supply chain management."
+
+                
+            ]
+            
+            
+        },
+        {
+            "tag": "four",
+            "patterns": [
+                "what is the fourth part of SCM"
+            
+                
+                
+            ],
+            "responses": [
+                "delevering \n Once products are made and sales are finalized, a company must get the products into the hands of its customers. The distribution process is often seen as a brand image contributor, as up until this point, the customer has not yet interacted with the product. In strong SCM processes, a company has robust logistic capabilities and delivery channels to ensure timely, safe, and inexpensive delivery of products."
+                
+            ]
+            
+            
+        },
+        {
+            "tag": "five ",
+            "patterns": [
+                "what is the fifth part of SCM"
+            
+                
+                
+            ],
+            "responses": [
+                "Returning \n The supply chain management process concludes with support for the product and customer returns. Its bad enough that a customer needs to return a product, and its even worse if its due to an error on the company's part. This return process is often called reverse logistics, and the company must ensure it has the capabilities to receive returned products and correctly assign refunds for returns received. Whether a company is performing a product recall or a customer is simply not satisfied with the product, the transaction with the customer must be remedied.    "
+                
+            ]
+            
+            
+        },
+        {
+            "tag": "Elements ",
+            "patterns": [
+                "what  are the elements of Supply Chain Models"
+            
+                
+                
+            ],
+            "responses": [
+                "external suppliers organizations that provide goods, parts of a product or services.\n internal functions and procedures the company's internal functions and procedures for produce a product \n responsible for transportation and delivery.the delivery of finished products from the producer or manufacturer to retailers"
+            ]
+            
+            
+        },
+        {
+            "tag": "importance ",
+            "patterns": [
+                "what is the importance of supply chain"
+            
+                
+                
+            ],
+            "responses": [
+                "Supply chain management is important because it can help achieve several business objectives.",
+                "controlling manufacturing processes can improve product quality, reducing the risk of recalls and lawsuits while helping to build a strong consumer brand.",
+                "controls over shipping procedures can improve customer service by avoiding costly shortages or periods of inventory oversupply.",
+                "supply chain management provides several opportunities for companies to improve their profit margins and is especially important for companies with large and international operations."
+            ]
+            
+            
+        },
+        {
+            "tag": "history ",
+            "patterns": [
+                "the history "
+                
+
+            
+                
+                
+            ],
+            "responses": [
+                "Supply chains have existed since ancient times, beginning with the very first product or service created and sold. With the advent of industrialization, SCM has become more sophisticated, allowing businesses to be more efficient in terms of producing and delivering goods and services. "
+            ]
+            
+            
+        },
+        {
+            "tag": "avantages ",
+            "patterns": [
+                "you can quote the advantages of the cloud on supply chain",
+                "what are the advantages of Scm"
+
+            ],
+            "responses": [
+                "Agility \n The availability \n The deployment \n Security"
+            ]
+            
+            
+        },
+        {
+            "tag": "agility ",
+            "patterns": [
+                "you can  explain to me the advantage of agility"
+
+            ],
+            "responses": [
+                "supply chains modern through and through offer a greater scalability and greater agility."
+            ]
+            
+            
+        },
+        {
+            "tag": " The availability",
+            "patterns": [
+                "you can  explain to me the advantage of  availability"
+
+            ],
+            "responses": [
+                "The Cloud makes it possible to guarantee access and availability services."
+          ]
+            
+            
+        },
+        {
+            "tag": " The deployment",
+            "patterns": [
+                "you can  explain to me the advantage of  deployment"
+
+            ],
+            "responses": [
+                "The deployment and implementation operation of a service Cloud requires little time."
+          ]
+            
+            
+        },
+        {
+            "tag": " The security",
+            "patterns": [
+                "you can  explain to me the advantage of  security"
+
+            ],
+            "responses": [
+                "the cloud guarantee users a very high degree of data security with data encryption."
+          ]
+            
+            
+        },
+        {
+            "tag": " outils",
+            "patterns": [
+                "you can give an idea about SCM tools"
+
+            ],
+            "responses": [
+                "Warehouse Management System \n Transport Management System \n système de planification avancee \n Customer Relationship Management \n Entreprise Resource Planning"
+            
+                
+          ]
+            
+            
+        },
+        {
+            "tag": " WMS",
+            "patterns": [
+                "what about the Warehouse Management System"
+
+            ],
+            "responses": [
+               "le WMS is software for controlling and managing the day-to-day operations of a warehouse. It is with this software that we track goods entering and leaving the warehouse. Thanks to it, it is possible to follow the path of each product: received, stored, prepared, packed, shipped. When a customer submits an order, the software knows if the item is in stock and can mark that order as ready to pack."
+            
+                
+          ]
+            
+            
+        },
+        {
+            "tag": "role WMS",
+            "patterns": [
+                "te role of Warehouse Management System"
+
+            ],
+            "responses": [
+                "reduce expenses by avoiding a large number of unnecessarily stocked products \n prevent stock-outs \n prevent stock-outs"
+                
+          ]
+            
+            
+        },
+        {
+            "tag": "TMS",
+            "patterns": [
+                "what about the Transport Management System"
+
+            ],
+            "responses": [
+                "Transport is the last step before the end customer, and therefore a decisive step for customer satisfaction. For this, companies must adopt a software solution, called TMS (Transport Management System) to help manage transport flows."
+                
+                
+          ]
+            
+            
+        },
+        {
+            "tag": "role TMS",
+            "patterns": [
+                "te role of Transport Management System "
+
+            ],
+            "responses": [
+                "receipt of products \n stock management \n preparation of orders \n shipment of goods."
+                
+          ]
+            
+            
+        },
+        {
+            "tag": "APS",
+            "patterns": [
+                "what about systeme "
+
+            ],
+            "responses": [
+                "An APS (Advanced Planning System), which is translated into French as advanced planning system, is software with a supply and production planning functionality. it allows companies to adapt to supply and demand. The APS takes into account a large amount of purchasing, production, storage, distribution and transport data so that companies can adapt the supply chain to customer demand.It is also a decision support tool introduction of new products, removal of products that are no longer sold."
+                
+                
+          ]
+            
+            
+        },
+        {
+            "tag": "CRM",
+            "patterns": [
+                "what about Customer Relationship Management "
+
+            ],
+            "responses": [
+            "CRM is the acronym for Customer Relationship Management (also called GRC, for Customer Relationship Management) is a software focused on customer relationship management.This tool is made up of a set of systems for implementing a strategy aimed at developing and optimizing a company's interactions with its customers."                
+                
+          ]
+            
+            
+        },
+        {
+            "tag": " Avantage CRM",
+            "patterns": [
+                "what about the advantage of the Customer Relationship Management "
+
+            ],
+            "responses": [
+                "manage customer contacts \n manage marketing campaigns \n manage customer service through responsive support,"     
+          ]
+            
+            
+        },
+        {
+            "tag": " ERP",
+            "patterns": [
+                "what about  the Entreprise Resource Planning "
+
+            ],
+            "responses": [
+                "An ERP (Enterprise Resource Planning in English) is software that looks like a large platform centralizing the tools for managing the main functions of a company: production, sales, purchasing, storage, delivery, customer relations, accounting , business management, "
+                    
+          ]
+            
+            
+        },
+        {
+            "tag": " ERP",
+            "patterns": [
+                "what about  the challenges of Entreprise Resource Planning "
+
+            ],
+            "responses": [
+                "Improve customer satisfaction \n Lower the costs \n Reduce your deadlines"             
+          ]
+            
+            
+        },
+        {
+            "tag": " problems",
+            "patterns": [
+                "are there any problems with the supply chain management "
+
+            ],
+            "responses": [
+                "Lack of Traceability \n Lower the costs \n Verification process"             
+          ]
+            
+            
+        },
+        {
+            "tag": "traceability ",
+            "patterns": [
+                " what is the problem of traceability"
+
+            ],
+            "responses": [
+                "Some supply chains suffer from opacity and a lack transparency in their processes. This lack of vision on the quality or origin of the materials or products is a defect that the big brands seek to correct given the the negative impact this can have on their image."
+                           
+          ]
+            
+            
+        },
+        {
+            "tag": " Lower the costs",
+            "patterns": [
+                " what is the problem of fraud and counterfeiting"
+
+            ],
+            "responses": [
+                "The supply chain also has negative aspects for the company from a financial point of view, since it can example losing substantial sums of money through it."
+          ]
+            
+            
+        },
+        {
+            "tag": "Reduce your deadlines ",
+            "patterns": [
+                " what is the problem of Verification process"
+
+            ],
+            "responses": [
+                "The number of actors and transactions involved in the supply chain is considerable, consequently slowing down the processes and increasing the risk of losses or errors."
+          ]
+            
+            
+        },
+        {
+            "tag": "solution ",
+            "patterns": [
+                " is there a solution for this problem "
+
+            ],
+            "responses": [
+                "blockchain"
+    
+            ]
+            
+            
+        },
+        {
+            "tag": "blockchain ",
+            "patterns": [
+                "you can give me a brief definition of blockchain"
+
+            ],
+            "responses": [
+                "is an information storage and transmission technology that is transparent, secure, and operates without a central control body "
+    
+            ]
+            
+            
+        },
+        {
+            "tag": "solutions ",
+            "patterns": [
+                "what are the solutions offered by the blockchain"
+
+            ],
+            "responses": [
+
+                "transparency \n Significant time and cost reduction \n Security of supplies \n streamlining the buying process"
+            ]
+            
+            
+        },
+        {
+            "tag": "solutions1 ",
+            "patterns": [
+                "what is the transparency solution"
+
+            ],
+            "responses": [
+
+                "a blockchain register distributed between its actors makes it possible to identify the source of the loss, theft or fraud, thus ensuring better overall control."
+                
+            ]
+            
+            
+        },
+        {
+            "tag": "solutions2 ",
+            "patterns": [
+                "what is Significant time and cost reduction"
+
+            ],
+            "responses": [
+
+
+                "The elimination of so-called 'trusted' intermediate parties also reinforces this reduction in costs and delays."
+            ]
+            
+            
+        },
+        {
+            "tag": "solutions3 ",
+            "patterns": [
+                "how to apply Security of Supply"
+
+            ],
+            "responses": [
+                "To secure its supply quickly and easily, it would suffice to apply a label to a product,  register it on the blockchain respecting the following data"
+
+
+            ]
+            
+            
+        },
+        {
+            "tag": "solutions4 ",
+            "patterns": [
+                " how we apply Automation and fluidification of the purchasing process"
+
+            ],
+            "responses": [
+
+                "On the blockchain, smart-contracts can be built. When the conditions chosen by the different parties are met, these smart contracts automatically execute their terms and conditions for invoicing, deliveries, payment validations."
+
+            ]
+            
+            
+        },
+
+        {
+            "tag": "futur ",
+            "patterns": [
+                " what is the future of blockchain in the supply chain"
+                
+
+            ],
+            "responses": [
+
+                
+                "Although it is still a technology under development and must prove itself, the supply chain will be a privileged field of application, hence the need for supply managers to master the subject in depth."
+
+            ]
+            
+            
+        },
+        {
+            "tag": "futur ",
+            "patterns": [
+               
+                "how to introduce a blockchain solution in the supply chain"
+
+            ],
+            "responses": [
+
+                "Choose your platform \n Initialize the Blockchain \n Implement smart contracts \n Choose your consensus protocol"
+
+            ]
+            
+            
+        },
+        {
+            "tag": "contrat ",
+            "patterns": [
+               
+                "smart contracts what is it"
+               
+
+            ],
+            "responses": [
+
+                "A smart contract is a self executing contract with the terms of the agreement between buyer and seller being directly written into lines of code. The code and the agreements contained therein exist across a distributed, decentralized blockchain network."
+                
+
+            ]
+            
+            
+        },
+        
+        {
+            "tag": "testimony",
+            "patterns": [
+               
+                
+                "are there any companies that work with the supply chain?"
+
+            ],
+            "responses": [
+
+                "Bissell \n cohu \n dp world \n FedEx"
+
+            ]
+            
+            
+        },
+        {
+            "tag": "testimonycohu",
+            "patterns": [
+               
+                
+                "what does cohu say about the scm"
+
+            ],
+            "responses": [
+
+                "We didn't want partnership relationships with third-party products, and if you look at who is leading the push in the cloud, it's Oracle."
+
+            ]
+            
+            
+        },
+        {
+            "tag": "testimonyBissell",
+            "patterns": [
+               
+                
+                "what does Bissell say about the scm"
+
+            ],
+            "responses": [
+
+                "When we chose Oracle's cloud-based platform, we got something to help transform our business. The solutions are fully functional and updated quarterly. If you're worried about where they are today, they're ready. And they will improve tomorrow."
+
+            ]
+            
+            
+        },
+        {
+            "tag": "testimonyFedEx",
+            "patterns": [
+               
+                
+                "what does FedEx say about the scm"
+
+            ],
+            "responses": [
+
+
+                "The Oracle Analytics tools allow us to drill into the operations on an almost real-time basis and see what is going on and evaluate how things are developing worldwide."
+            ]
+            
+            
+        },
+        {
+            "tag": "testimonyCisco",
+            "patterns": [
+               
+                
+                "and what is dp world feedbak when working with scm"
+
+            ],
+            "responses": [
+
+                "We were able to run the whole  operation without anybody in the office. We never thought we'd be able to run the company without employees onsite."
+
+            ]
+            
+            
+        },
+        {
+            "tag": "industrie 4.0",
+            "patterns": [
+               
+                
+                "what is the relationship between scm and industry 4.0",
+                "SCM et industry 4.0"
+                
+                
+
+            ],
+            "responses": [
+
+                "Industry 4.0 SCM also offers a significant advantage over traditional SCM, as it enables aligned planning and execution while driving substantial cost savings.",
+                "Smart SCM solutions can help you meet customer demand and financial goals at the same time.",
+                "it can free up supply chain employees to contribute to the company in such a way as to produce more added value."
+            ]
+            
+            
+        },
+        {
+            "tag": "client",
+            "patterns": [
+              
+                "the relationship between the customer and supply chain management"
+                
+
+            ],
+            "responses": [
+                "SCM has always been about increasing efficiency and reducing costs. These needs have not changed. On the other hand, what has changed is that the customer now plays a resolutely central role in defining the priorities of the SCM. It has been said that customer experiences live and die in the supply chain."
+
+            ]
+            
+            
+       },
+       {
+        "tag": "chain logistique",
+        "patterns": [
+          "definition de la chain logistique"
+          
+            
+            
+
+        ],
+        "responses": [
+
+            " chain logistique correspond a la gestion des flux de marchandises, de donnees et de finances associes à un produit ou service, de l'approvisionnement en matieres premieres  et a la livraison du produit a sa destination finale."
+        ]
+        
+        
+   },
+   {
+    "tag": "SC vs chain logistique",
+    "patterns": [
+      "quel est la difference entre chain d'approvisionnement et la chain logistique"
+      
+        
+        
+
+    ],
+    "responses": [
+
+        "La supply chain est trop souvent reduite a la seule logistique. Et bien que certains pensent que supply chain = chaine logistique, il n'en est rien. En effet, la logistique est une composante du SCM mais n'est pas son entierete. La supply represente une chaine globale et des fonctions qui ne sont pas de la logistique ."
+    ]
+    
+    
+},
+{
+    "tag": "salut",
+    "patterns": [
+      "bonjour"
+      
+      
+        
+        
+
+    ],
+    "responses": [
+
+        "Bonjour ,je suis rombo,comment je peux vous aider?"
+
+    ]
+    
+    
+}
+
+
+
+
+
+
+   ]
+}
